@@ -1,0 +1,107 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the font color and background globally */
+body {
+  font-family: "Courier New", monospace; /* Example font */
+  background-color: #000000; /* Black background */
+  color: #00ff00; /* Bright green text */
+  margin: 0;
+  padding: 40px; /* Adjust as needed for spacing */
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Paragraph column styling */
+.text-column {
+  width: 30%; /* Half the width of the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align text to the top */
+}
+
+/* Paragraph styling */
+p {
+  line-height: 1.5; /* Adjust line height for better readability */
+  margin-top: 10px;
+}
+
+/* Button column styling */
+.button-column {
+  width: 80%; /* Half the width of the container */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Button styling */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  width: 250px;
+  background-color: #000000;
+  color: #00ff00; /* Black text */
+  border: solid;
+  border-width: 2px;
+  cursor: pointer;
+  font-family: "Courier New", monospace; /* Match the font with the body */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Add any additional styling you need for your elements */
+
+/* LETTER TO EDITOR CSS */
+
+.ltoe {
+  color: #fff; /* White text */
+  padding: 20px;
+  display: flex;
+  height: calc(100% - 40px); /* Full height minus padding */
+}
+
+.story-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 10px; /* Adjust space between columns */
+  padding-right: 20px;
+  border-right: 1px solid #00ff00; /* Solid green line */
+  height: 100%; /* Make sure the html and body are full height */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #000; /* Assuming you want a black background */
+}
+
+.comment-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 20px; /* Matching padding-right of story-column */
+}
+
+/* Make textarea fill the flexible space */
+textarea {
+  width: 100%; /* Fill the width of its container */
+  height: 400px; /* Fixed height, adjust as needed */
+  margin-bottom: 10px;
+  background-color: #000; /* Black background */
+  color: #00ff00; /* Green text */
+  border: 1px solid #00ff00; /* Green border */
+}
+
+/* Container for the buttons to lay them out in a row */
+.buttons-container {
+  display: flex;
+  justify-content: center; /* Align the buttons to the right */
+  gap: 20px; /* Add space between the buttons */
+}
