@@ -1,0 +1,277 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  body {
+    background-image: url(images/computerbackground.webp);
+    background-size: cover; /* Cover ensures the image covers the whole area */
+    background-position: center; /* Aligns the image nicely in the center */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed during scroll */
+    display: flex;
+    min-height: 100vh; /* Minimum height to fill the screen */
+    align-items: flex-start; /* Align to the top */
+    overflow: auto; /* Enable scroll if content overflows */
+  }
+  
+  .popup {
+    margin: 40px;
+    width: 450px;
+    border-radius: 8px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensures the child elements do not overflow the rounded border */
+  }
+  
+  .popup-header {
+    background: #c2c2c2; /* Grey bar at the top */
+    padding: 10px;
+    height: 30px; /* Adjust height as needed */
+  }
+  
+  .popup-body {
+    background: #efefef; /* White background for the popup body */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Aligns the button to the right*/
+  }
+  
+  .popup-body p {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .continue-button {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+  }
+  
+  .continue-button:hover {
+    background-color: #64acfa;
+    color: #fff;
+  }
+  
+  /* STORY PAGE */
+
+  .container {
+    display: flex;
+    width: 100%; /* Take full width of the viewport minus padding */
+    max-width: 1200px; /* Adjust this value based on your design needs */
+  
+  }
+
+.story {
+    width:40%; /* Adjusts to have some space between columns */
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-right: .025px solid #909090;
+}
+  
+.dialog-box {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 20px; /* Adjust the value to determine when it becomes 'sticky' */
+    width: 40%;
+    max-height: 500px;
+    width: 60%;
+    max-height: 500px; /* Set the maximum height */
+    min-height: 300px; /* Set a minimum height for smaller content */
+    background: #efefef;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Allows scrolling within the dialog box if content overflows */
+  }
+  
+  .textarea-container {
+    flex: 1; /* Flex grow to take available space */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  textarea {
+    flex: 1; /* Allows the textarea to grow and fill the space within the container */
+    margin-bottom: 1%;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: vertical; /* Allows the textarea to be resized vertically */
+    overflow: hidden; /* Improves appearance when resizing */
+  }
+  
+  .button-group {
+    margin-top: 10px; /* Adds space between textarea and buttons */
+  }
+  
+  /* ... rest of your styles ... */
+
+  h1 {
+    font-size: 24px; /* Adjust size as needed */
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 18px; /* Adjust size as needed */
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 14px;
+    line-height: 1.6; /* Adjust line height for better readability */
+    color: #333;
+  }
+  
+  .go-back-button, .submit-button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .go-back-button:hover, .submit-button:hover {
+    background-color: #007aff;
+    color: #fff;
+  }
+  
+
+  /* ... existing styles ... */
+
+/* New Layout Page Styles */
+/* ... existing styles ... */
+
+.sourcepage {
+    display: flex;
+  }
+  
+  .briefing_dialog {
+    border-radius: 8px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensures the child elements do not overflow the rounded border */
+    background-color: #efefef;
+  }
+  
+
+  .briefing {
+    width: 30%; /* Adjust the width as needed */
+    height: calc(100vh - 60px); /* Adjust height if you have a header or footer */
+    top: 0;
+    left: 0;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling within the sidebar if content overflows */
+  }
+
+  .briefing-body {
+    background: #efefef; /* White background for the popup body */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .storypopup {
+    margin: 40px;
+    width: 55%; 
+    border-radius: 8px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+  .continue-button {
+    padding: 10px 20px;
+    width: 100px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+ continue-button:hover {
+    background-color: #007aff;
+    color: #fff;
+  }
+  
+  .content {
+    margin: 40px;
+    width: 55%; 
+    border-radius: 8px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+  .content-popup-header {
+    background: #c2c2c2; /* Grey bar at the top */
+    padding: 10px;
+    height: 30px; /* Adjust height as needed */
+  }
+  
+  .content-popup-body {
+    background: #efefef; /* White background for the popup body */
+    padding: 20px;
+  }
+  
+  .content-popup-body p {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 15px;}
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust size as needed */
+    gap: 20px;
+  }
+    
+  
+  .content {    padding: 20px;
+    width: 70%; /* Adjusts width to account for .briefing */
+    overflow-y: auto; /* Allows scrolling within the main content area */
+  }
+  
+  .category-header {
+    border-bottom : 1px solid #ccc;
+    border-top : 1px solid #ccc;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+
+  }
+  
+  .documents, .images, .videos {
+    margin-bottom: 20px; /* Adds space between the categories */
+
+  }
+
+
+  /* Additional styles for individual items */
+  /* Assuming you will have individual items in each category, like thumbnails */
+  .document-item, .image-item, .video-item {
+    font-size: smaller;
+    padding: 10px;
+    /* More styling for the items as necessary */
+  }
+  

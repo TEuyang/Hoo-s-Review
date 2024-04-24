@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>By You</title>
+  </head>
+  <body>
+    <div class="sourcepage">
+      <div class="briefing">
+        <div class="briefing_dialog">
+          <div class="popup-header"></div>
+          <div class="briefing-body">
+            <p>Hello Larry,</p>
+
+            <p>
+              We're reaching out because we're in search of a journalist with a
+              deep understanding and a trusted voice to craft a retrospective
+              exploring the last fifty years of the entertainment industry. This
+              comes at a significant moment—the American Federation of Audiences
+              has just made its inaugural payments to members. Your article
+              should trace the journey from the dawn of the streaming era to
+              today, highlighting the key factors that have shaped the highly
+              personalized media landscape of our time, and the growing
+              resistance it's facing. Enclosed with this message, you'll find a
+              collection of documents to help you dive into the history of the
+              technologies that molded our current media world, as well as the
+              societal and cultural impacts that followed.
+            </p>
+            <p>Warm regards,</p>
+
+            <p>The Associated Press</p>
+
+            <p>
+              P.S. This note was penned by an A.I. eager to see your narrative
+              unfold!
+            </p>
+          </div>
+        </div>
+        <div class="storypopup">
+          <div class="popup-header"></div>
+          <div class="popup-body">
+            <p>Would you like to continue?</p>
+            <button class="continue-button">Continue</button>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <!-- DOCUMENT SECTION -->
+        <div class="category">
+          <h2 class="category-header">Documents</h2>
+          <div class="documents grid-container">
+            <div
+              class="document-item"
+              onclick="showDocumentPopup('/images/Limbic_Page1.jpg', 'Limbic_Page1', 'This is a description or note related to Document 1.')"
+            >
+              <img src="/images/Limbic_Page1.jpg" alt="Document 1" />
+              <p>Limbic Patent</p>
+            </div>
+            <div
+              class="document-item"
+              onclick="showDocumentPopup('/images/Limbic_Page1.jpg', 'Limbic_Page1', 'This is a description or note related to Document 1.')"
+            >
+              <img src="/images/Limbic_Page1.jpg" alt="Document 1" />
+              <p>Limbic Patent</p>
+            </div>
+            <div
+              class="document-item"
+              onclick="showDocumentPopup('/images/Limbic_Page1.jpg', 'Limbic_Page1', 'This is a description or note related to Document 1.')"
+            >
+              <img src="/images/Limbic_Page1.jpg" alt="Document 1" />
+              <p>Limbic Patent</p>
+            </div>
+            <div
+              class="document-item"
+              onclick="showDocumentPopup('/images/Limbic_Page1.jpg', 'Limbic_Page1', 'This is a description or note related to Document 1.')"
+            >
+              <img src="/images/Limbic_Page1.jpg" alt="Document 1" />
+              <p>Limbic Patent</p>
+            </div>
+            <div
+              class="document-item"
+              onclick="showDocumentPopup('/images/Limbic_Page1.jpg', 'Limbic_Page1', 'This is a description or note related to Document 1.')"
+            >
+              <img src="/images/Limbic_Page1.jpg" alt="Document 1" />
+              <p>Limbic Patent</p>
+            </div>
+            <div
+              class="document-item"
+              onclick="showDocumentPopup('/images/Limbic_Page1.jpg', 'Limbic_Page1', 'This is a description or note related to Document 1.')"
+            >
+              <img src="/images/Limbic_Page1.jpg" alt="Document 1" />
+              <p>Limbic Patent</p>
+            </div>
+            <div
+              class="document-item"
+              onclick="showDocumentPopup('/images/Limbic_Page1.jpg', 'Limbic_Page1', 'This is a description or note related to Document 1.')"
+            >
+              <img src="/images/Limbic_Page1.jpg" alt="Document 1" />
+              <p>Limbic Patent</p>
+            </div>
+          </div>
+        </div>
+        <!-- IMAGES SECTION -->
+        <div class="category">
+          <h2 class="category-header">Images</h2>
+          <div class="images grid-container"></div>
+        </div>
+        <!-- VIDEOS SECTION -->
+        <div class="category">
+          <h2 class="category-header">Videos</h2>
+          <div class="videos grid-container"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup for displaying image and notes -->
+    <div id="documentPopup" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img id="popupImage" src="" alt="Document Image" style="width: 100%" />
+        <pre id="popupNotes" class="text-file"></pre>
+        <!-- Preformatted text container for notes -->
+      </div>
+    </div>
+    <div id="documentPopup" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img id="popupImage" src="" alt="Document Image" style="width: 100%" />
+        <div id="popupNotes"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

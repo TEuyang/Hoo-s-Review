@@ -1,0 +1,289 @@
+/* Basic CSS Reset and Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-image: url(images/computerbackground.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  min-height: 100vh;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+/* Common Popup Styling */
+.popup,
+.briefing_dialog,
+.storypopup,
+.content {
+  border-radius: 8px;
+  border: 1px solid #d1d1d1;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: #efefef;
+
+}
+
+.popup-header,
+.content-popup-header {
+  background: #c2c2c2;
+  padding: 10px;
+  height: 30px;
+}
+
+.popup-body,
+.briefing-body,
+.content-popup-body {
+  padding: 20px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Button Styling */
+.continue-button,
+.go-back-button,
+.submit-button  {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+  align-self: flex-end;
+}
+
+.continue-button:hover,
+.go-back-button:hover,
+.submit-button:hover {
+  background-color: #007aff;
+  color: #fff;
+}
+
+
+
+/* PAGE 1: Redirect Popup Page */
+.popup {
+  margin: 30px;
+  width: 450px;
+}
+
+.popup-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* PAGE 2: By You Sources Page */
+.sourcepage {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  cursor: pointer; /* Indicates clickable items */
+}
+
+.document-item, .image-item, .video-item {
+  display: flex;            /* Enables flexbox layout model */
+  flex-direction: column;   /* Stacks items vertically */
+  align-items: center;      /* Centers items horizontally within the container */
+  justify-content: center;  /* Centers items vertically within the container */
+  text-align: center;       /* Ensures text is centered */
+  padding: 10px;            /* Adds space around the content */
+  font-size: smaller;       /* Adjust the font size as needed */
+  /* font-weight: bold; */
+  cursor: pointer;          /* Indicates the item is clickable */
+}
+
+/* Image styling for consistency and visibility */
+.image-item img,
+.document-item img,
+.video-item img {
+  max-width: 100%;            /* Ensures the image is fully contained within its element */
+  max-height: 80px;
+  height: auto;             /* Maintains the aspect ratio of the image */
+  margin-bottom: 5px; 
+}
+
+.image-item p,
+.document-item p,
+.video-item p {
+  display: block;
+  align-items: center;
+}
+
+.briefing {
+  width: 30%;
+  padding: 20px;
+  height: calc(100vh - 60px);
+}
+
+.briefing p,
+.content-popup-body p {
+  margin-bottom: 15px;
+}
+
+.storypopup {
+  margin-top: 10px;
+}
+
+.content {
+  margin-right: 10%;
+  margin-top:10px;
+  width: 70%;
+  overflow-y: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.category-header {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  font-size: 24px;
+}
+
+.documents,
+.images,
+.videos {
+  margin-bottom: 20px;
+}
+
+/* JavaScript popup Styling */
+
+.modal {
+  display: none; /* Keep hidden until triggered */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  display: flex; /* This can be column or row depending on layout */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-inner {
+  display: flex;
+  align-items: center;
+}
+
+
+.popup-notes {
+  max-width: 400px; /* Or whatever maximum width you want for the notes */
+  margin-left: 20px; /* Ensure some spacing between image and notes */
+  white-space: pre-line; /* This will respect newline characters in the notes */
+}
+
+
+.modal-content {
+  background-color: transparent;
+  padding: 20px;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+#popupImage {
+  max-width: 100%; /* Full width of the .modal-content */
+  max-height: 80vh; /* Adjust the max-height */
+  object-fit: contain; /* Ensures the image fits within the element's dimension */
+  margin-right: 20px; /* Add some spacing between the image and the notes */
+}
+
+
+
+/* /////PAGE 3: Story Page//// */
+.articlecontainer {
+  display: flex;
+  width: 200%;
+  max-width: 1200px;
+}
+
+.story p, h1, h3 {
+  padding: 5px;
+}
+
+
+
+.lettertotheeditor {
+  position: sticky;
+  top: 20px;
+  max-height: 500px;
+  min-height: 300px;
+  width: 60%;
+  margin: 30px;
+}
+
+.lettertotheeditor textarea {
+  width: 100%; /* Full width */
+  height: 300px; /* Increased height */
+  padding: 10px; /* Comfortable padding */
+  box-sizing: border-box; /* Include padding and border in the width */
+  resize: vertical; /* Allow vertical resize only */
+}
+
+.textarea-container,
+.textarea {
+  flex: 1;
+}
+
+.button-group {
+  margin-top: 10px;
+}
+
+/* Headings and Paragraphs */
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Document, Image, Video Item Styling */
+.document-item,
+.image-item,
+.video-item {
+  font-size: smaller;
+  padding: 10px;
+  /* Add additional styling if necessary */
+}
